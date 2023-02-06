@@ -1,0 +1,142 @@
+.banner {
+    padding: 150px 0 400px;
+    /* background: url(assets/images/banner/home1.jpg); */
+    background-size: cover;
+    background-position: center;
+}
+.banner .banner-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.banner .banner-content .banner-title {
+    font-size: 55px;
+    margin-bottom: 16px;
+}
+.banner .banner-content .banner-text {
+    font-size: 20px;
+    line-height: 30px;
+}
+.banner .btn-part a {
+    padding: 20px 50px !important;
+    border-radius: 50px !important;
+}
+.about {
+    padding-bottom: 100px;
+}
+.about .about-part {
+    background: #e7f4f6;
+    padding: 60px 60px 70px;
+    border-radius: 5px;
+    margin-top: -60px;
+}
+.about .about-part .desc {
+    font-size: 18px;
+    line-height: 30px;
+    color: #505050;
+}
+.about .notice-bord {
+    margin-top: -60px;
+}
+.about .notice-bord .title {
+    background: #21a7d0;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 18px 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.about .notice-bord ul {
+    padding: 0px;
+}
+.about .notice-bord li {
+    position: relative;
+    background: #e7f4f6;
+    margin-bottom: 12px;
+    border-radius: 3px;
+    padding: 20px;
+    padding-left: 0 !important;
+    overflow: hidden;
+}
+.about .notice-bord li .date {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #21a7d0;
+    border-right: 1px solid #21a7d0;
+    padding-right: 10px;
+    font-weight: 600;
+    width: 80px;
+}
+.about .notice-bord li .date span {
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    display: block;
+}
+.about .notice-bord li .text {
+    padding-left: 115px;
+    font-weight: 500;
+}
+.about .notice-bord li:last-child {
+    margin-bottom: 0;
+}
+
+.categories {
+    background: #f3f8f9;
+    padding-bottom: 70px;
+    padding-top: 94px;
+}
+.categories .sec-title {
+    margin-bottom: 50px;
+}
+.categories .categories-item {
+    border: 1px solid #dfe9eb;
+    background: #ffffff;
+    overflow: hidden;
+    padding: 30px;
+    display: block;
+    color: #505050;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.categories .categories-item .icon-part {
+    margin-bottom: 25px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 100%;
+    background: rgba(22, 170, 202, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.categories .categories-item .icon-part img {
+    -webkit-transition: all 0.4s ease;
+    transform: scale(1);
+}
+.categories .categories-item .content-part .title {
+    color: #111111;
+    margin-bottom: 5px;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+.categories .categories-item:hover {
+    background: #21a7d0;
+    color: #ffffff;
+    border-color: #21a7d0;
+}
+.categories .categories-item:hover .icon-part {
+    background: #ffffff;
+}
+.categories .categories-item:hover .icon-part img {
+    transform: scale(0.9);
+}
+.categories .categories-item:hover .content-part .title {
+    color: #ffffff;
+}

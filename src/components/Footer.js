@@ -1,4 +1,10 @@
 import React from "react";
+import {
+    faEnvelope,
+    faMapLocationDot,
+    faPhoneVolume,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
 import "./Footer.css";
@@ -12,7 +18,10 @@ function Navbar() {
                         <div className="row">
                             <div className="col-lg-5 col-md-12 col-sm-12 md-mb-50">
                                 <NavLink to="/">
-                                    <img src="assets/images/logo.png" alt="" />
+                                    <img
+                                        src="https://img.freepik.com/free-vector/flat-design-mc-logo-design_23-2149482035.jpg?w=2000"
+                                        alt="Logo"
+                                    />
                                 </NavLink>
                                 <h2 className="title">
                                     Ýaşlaryň arasynda ylmy işler boýunça Halkara
@@ -55,18 +64,20 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-lg-4 col-md-12 col-sm-12">
+                            <div className="col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-4">
                                 <h4 className="title">Habarlaşmak üçin</h4>
                                 <ul className="address">
                                     <li>
-                                        <i className="location"></i>
+                                        <FontAwesomeIcon
+                                            icon={faMapLocationDot}
+                                        />
                                         <div className="desc">
                                             Türkmenistan, Aşgabat şäheri,
                                             Arçabil 10.
                                         </div>
                                     </li>
                                     <li>
-                                        <i className="call"></i>
+                                        <FontAwesomeIcon icon={faPhoneVolume} />
                                         <div className="desc">
                                             <a href="tel:+993-12-00-00-00">
                                                 +993-12-00-00-00
@@ -78,7 +89,7 @@ function Navbar() {
                                         </div>
                                     </li>
                                     <li>
-                                        <i className="email"></i>
+                                        <FontAwesomeIcon icon={faEnvelope} />
                                         <div className="desc">
                                             <a href="mailto:example@mail.com">
                                                 example@mail.com
@@ -96,7 +107,15 @@ function Navbar() {
                             <div className="col-lg-12 md-mb-20">
                                 <div className="copyright md-text-left">
                                     <p>
-                                        Ähli hukuklary goralan © 2023. Powered by <a target="_blank" rel="noreferrer" href="https://it.net.tm/">"Sanly Çözgüt IT meýdança" HJ.</a>
+                                        Ähli hukuklary goralan © 2023. Powered
+                                        by{" "}
+                                        <a
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            href="https://it.net.tm/"
+                                        >
+                                            "Sanly Çözgüt IT meýdança" HJ.
+                                        </a>
                                     </p>
                                 </div>
                             </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900');
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@ html,
 body {
     margin: 0 !important;
     padding: 0;
+    font-family: "Rubik", sans-serif;
 }
 img {
     max-width: 100%;
@@ -23,9 +26,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Rubik", sans-serif;
     color: #111111;
-    margin: 0 0 26px;
+    margin: 0 0 26px!important;
     line-height: 1.2;
 }
 h1 {
@@ -93,4 +96,12 @@ ul {
 }
 .clear {
     clear: both;
+}
+.sub-title {
+    color: #21a7d0;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }

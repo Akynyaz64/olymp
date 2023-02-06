@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "./Navbar.css";
 
@@ -13,11 +15,9 @@ function Navbar() {
                         className="navbar-brand text-white fw-bold logo"
                     >
                         <img
-                            src="/img/logo.svg"
+                            src="https://img.freepik.com/free-vector/flat-design-mc-logo-design_23-2149482035.jpg?w=2000"
                             alt="logo"
-                            style={{ width: "50px" }}
                         />
-                        LOGO
                     </NavLink>
                     <button
                         className="navbar-toggler bg-white"
@@ -28,7 +28,7 @@ function Navbar() {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <span className="navbar-toggler-icon"></span>
+                        <FontAwesomeIcon icon={faBars} />
                     </button>
 
                     <div
@@ -39,14 +39,16 @@ function Navbar() {
                             <span>
                                 <NavLink
                                     to="/"
-                                    className="nav-item nav-link text-uppercase me-3"
+                                    className={`"nav-item nav-link text-uppercase me-3" ${({
+                                        isActive,
+                                    }) => (isActive ? "active" : undefined)}`}
                                 >
                                     Baş sahypa
                                 </NavLink>
                             </span>
                             <span>
                                 <NavLink
-                                    to="/"
+                                    to="/test"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
                                     Barada
@@ -54,7 +56,7 @@ function Navbar() {
                             </span>
                             <span>
                                 <NavLink
-                                    to="/"
+                                    to="/test"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
                                     Products
@@ -62,36 +64,39 @@ function Navbar() {
                             </span>
                             <span>
                                 <NavLink
-                                    to="/"
+                                    to="/test"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
-                                    galereýa
+                                    Galereýa
                                 </NavLink>
                             </span>
                             <span>
                                 <NavLink
-                                    to="/"
+                                    to="/test"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
-                                    habarlaşmak
+                                    Habarlaşmak
                                 </NavLink>
                             </span>
                             <span>
                                 <li className="nav-item dropdown">
                                     <NavLink
-                                        to={"/"}
+                                        to="/test"
                                         className="nav-link dropdown-toggle text-uppercase me-3"
                                         role="button"
+                                        id="dropdownMenuButton"
                                         data-bs-toggle="dropdown"
                                         aria-expanded="false"
-                                        style={{ letterSpacing: "1px" }}
                                     >
                                         Email
                                     </NavLink>
-                                    <ul className="dropdown-menu rounded-0">
+                                    <ul
+                                        className="dropdown-menu rounded-0"
+                                        aria-labelledby="dropdownMenuButton"
+                                    >
                                         <li>
                                             <NavLink
-                                                to="/"
+                                                to="/test"
                                                 className="dropdown-item bg-white text-black"
                                             >
                                                 Profile
@@ -99,7 +104,7 @@ function Navbar() {
                                         </li>
                                         <li>
                                             <NavLink
-                                                to="/"
+                                                to="/test"
                                                 className="dropdown-item bg-white text-black"
                                             >
                                                 Profile
@@ -108,14 +113,14 @@ function Navbar() {
                                     </ul>
                                 </li>
                             </span>
-                            <NavLink
-                                to="/login"
-                                className="btn btn-outline-green rounded-0 fw-bold"
-                            >
-                                <button type="button" class="btn btn-success">
-                                    Ýüz tutma
-                                </button>
-                            </NavLink>
+                            <div className="btn-part p-0">
+                                <NavLink
+                                    to="/login"
+                                    className="rounded-0 fw-bold"
+                                >
+                                    Ýüz tutmak
+                                </NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>

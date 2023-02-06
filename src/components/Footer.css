@@ -9,6 +9,10 @@
 .footer-top {
     padding: 65px 0 65px;
 }
+.footer-top img {
+    max-height: 120px;
+    margin-bottom: 30px;
+}
 .footer-top .title {
     color: #ffffff;
     font-size: 18px;
@@ -16,6 +20,8 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 35px;
+    overflow: hidden;
+    max-width: 40ch;
 }
 .footer-top .footer-list {
     padding: 0px;
@@ -46,20 +52,21 @@
     margin-bottom: 0;
 }
 .footer-top .address {
+    display: flex;
+    flex-direction: column;
     padding: 0px;
 }
 .footer-top .address li {
     position: relative;
     margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
 }
-.footer-top .address li i {
-    position: absolute;
-}
-.footer-top .address li i:before {
-    color: #ffffff;
+.footer-top .address li svg path {
+    color: #ffffff!important;
 }
 .footer-top .address li .desc {
-    padding-left: 35px;
+    padding-left: 20px;
     color: #ffffff;
 }
 .footer-top .address li .desc a {
