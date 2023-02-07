@@ -118,6 +118,7 @@
     transition: all 0.3s ease;
 }
 .categories .categories-item .icon-part img {
+    transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     transform: scale(1);
 }

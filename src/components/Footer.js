@@ -60,7 +60,7 @@ function Navbar() {
                                         <NavLink to="products">Media</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="products">
+                                        <NavLink to="contact">
                                             Habarlaşmak
                                         </NavLink>
                                     </li>

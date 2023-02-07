@@ -42,6 +42,7 @@ function Navbar() {
                                     className={`"nav-item nav-link text-uppercase me-3" ${({
                                         isActive,
                                     }) => (isActive ? "active" : undefined)}`}
+                                    end
                                 >
                                     Baş sahypa
                                 </NavLink>
@@ -72,7 +73,7 @@ function Navbar() {
                             </span>
                             <span>
                                 <NavLink
-                                    to="/test"
+                                    to="contact"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
                                     Habarlaşmak
