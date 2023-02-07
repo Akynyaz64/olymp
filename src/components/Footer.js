@@ -19,7 +19,7 @@ function Navbar() {
                             <div className="col-lg-5 col-md-12 col-sm-12 md-mb-50">
                                 <NavLink to="/">
                                     <img
-                                        src="https://img.freepik.com/free-vector/flat-design-mc-logo-design_23-2149482035.jpg?w=2000"
+                                        src="https://education.gov.tm/img/tm_gerb.svg"
                                         alt="Logo"
                                     />
                                 </NavLink>
@@ -29,7 +29,9 @@ function Navbar() {
                                 </h2>
                             </div>
                             <div className="col-lg-3 col-md-12 col-sm-12 md-mb-50">
-                                <h4 className="title">Salgylar</h4>
+                                <div className="title-rel">
+                                    <h4 className="title">Salgylar</h4>
+                                </div>
                                 <ul className="footer-list">
                                     <li>
                                         <NavLink to="products">
@@ -65,7 +67,9 @@ function Navbar() {
                                 </ul>
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-4">
-                                <h4 className="title">Habarlaşmak üçin</h4>
+                                <div className="title-rel">
+                                    <h4 className="title">Habarlaşmak üçin</h4>
+                                </div>
                                 <ul className="address">
                                     <li>
                                         <FontAwesomeIcon

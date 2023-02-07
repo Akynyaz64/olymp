@@ -6,11 +6,34 @@ import "./Home.css";
 
 function HomePage() {
     const settings = {
+        arrows: false,
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        swipeToSlide: true,
+        pauseOnHover: true,
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
@@ -193,70 +216,77 @@ function HomePage() {
                     </div>
                 </div>
             </div>
-            <div className="partner pt-100 pb-100 md-pt-70 md-pb-70 gray-bg">
+            <div className="partner">
                 <div className="container">
+                    <div className="sec-title">
+                        <div className="sub-title">Hyzmatdaşlar</div>
+                        <h2 className="title mb-0">Biziň hyzmatdaşlarymyz</h2>
+                    </div>
                     <div className="rs-carousel owl-carousel">
                         <Slider {...settings}>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/1.png"
-                                        alt=""
-                                    />
-                                    A
-                                </a>
+                                <img
+                                    src="https://www.mfa.gov.tm/img/dim_logo.png"
+                                    alt=""
+                                />
                             </div>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/2.png"
-                                        alt=""
-                                    />
-                                    B
-                                </a>
+                                <img
+                                    src="https://education.gov.tm/img/tm_gerb.svg"
+                                    alt=""
+                                />
                             </div>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/3.png"
-                                        alt=""
-                                    />
-                                    C
-                                </a>
+                                <img
+                                    src="https://yashlar.gov.tm/source/img/png/logo.png"
+                                    alt=""
+                                />
                             </div>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/4.png"
-                                        alt=""
-                                    />
-                                    D
-                                </a>
+                                <img
+                                    src="https://www.mfa.gov.tm/img/dim_logo.png"
+                                    alt=""
+                                />
                             </div>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/5.png"
-                                        alt=""
-                                    />
-                                    E
-                                </a>
+                                <img
+                                    src="https://education.gov.tm/img/tm_gerb.svg"
+                                    alt=""
+                                />
                             </div>
                             <div className="partner-item">
-                                <a href="index3.html#">
-                                    <img
-                                        src="assets/images/partner/6.png"
-                                        alt=""
-                                    />
-                                    F
-                                </a>
+                                <img
+                                    src="https://yashlar.gov.tm/source/img/png/logo.png"
+                                    alt=""
+                                />
                             </div>
                         </Slider>
                     </div>
                 </div>
             </div>
-            <h1>My home page</h1>
-            <h1>My home page</h1>
+            <div className="cta">
+                <div className="cta-img">
+                    <img
+                        src="https://as1.ftcdn.net/v2/jpg/03/65/17/50/1000_F_365175029_hPmiZIgVMYdZumpjnmqN3FgbESLXrM4O.jpg"
+                        alt=""
+                    />
+                </div>
+                <div className="cta-content text-center">
+                    <div className="sec-title">
+                        <h2 className="title">Bäsleşige hasaba alyş açyk!</h2>
+                        <div className="desc">
+                            Ýaşlaryň arasynda ylmy işler boýunça geçirilýän
+                            Halkara bäsleşigine gatnaşmak üçin aşaky düwmä
+                            basyň!
+                        </div>
+                    </div>
+                    <div className="btn-part p-0">
+                        <NavLink to="/login" className="fw-bold">
+                            Ýüz tutmak
+                        </NavLink>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

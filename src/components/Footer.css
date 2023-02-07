@@ -23,6 +23,18 @@
     overflow: hidden;
     max-width: 40ch;
 }
+.footer-top .title-rel {
+    position: relative;
+}
+.footer-top .title-rel .title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 50px;
+    background: #21a7d0;
+}
 .footer-top .footer-list {
     padding: 0px;
 }
@@ -63,7 +75,7 @@
     align-items: center;
 }
 .footer-top .address li svg path {
-    color: #ffffff!important;
+    color: #21a7d0 !important;
 }
 .footer-top .address li .desc {
     padding-left: 20px;

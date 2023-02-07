@@ -15,7 +15,7 @@ function Navbar() {
                         className="navbar-brand text-white fw-bold logo"
                     >
                         <img
-                            src="https://img.freepik.com/free-vector/flat-design-mc-logo-design_23-2149482035.jpg?w=2000"
+                            src="https://education.gov.tm/img/tm_gerb.svg"
                             alt="logo"
                         />
                     </NavLink>
