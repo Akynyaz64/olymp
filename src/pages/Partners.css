@@ -1,0 +1,50 @@
+.partners {
+    background: #f9f8f8;
+    padding: 120px 0;
+}
+.partners .partner {
+    padding: 0 30px;
+    margin-bottom: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.partners .partner .img-part {
+    position: relative;
+    z-index: 111;
+}
+.partners .partner .img-part img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.partners .partner .content-part {
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    z-index: 111;
+}
+.partners .partner .content-part .title {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+}
+.partners .partner .content-part .title a {
+    color: #031a3d;
+}
+.partners .partner .content-part .title a:hover {
+    color: #21a7d0;
+}
+.partners .partner:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 78%;
+    background: #ffff;
+    border-radius: 3px;
+}
+.partners .partner:hover {
+    transform: translateY(-10px);
+}

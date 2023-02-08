@@ -90,10 +90,10 @@ function Navbar() {
                             </span>
                             <span>
                                 <NavLink
-                                    to="/test"
+                                    to="partners"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
-                                    Galereýa
+                                    Hyzmatdaşlar
                                 </NavLink>
                             </span>
                             <span>
