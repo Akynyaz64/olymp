@@ -34,12 +34,12 @@ function Navbar() {
                                 </div>
                                 <ul className="footer-list">
                                     <li>
-                                        <NavLink to="products">
+                                        <NavLink to="/">
                                             Baş sahypa
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="products">
+                                        <NavLink to="about/rules">
                                             Düzgünnama
                                         </NavLink>
                                     </li>

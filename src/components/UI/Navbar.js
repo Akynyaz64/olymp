@@ -48,12 +48,37 @@ function Navbar() {
                                 </NavLink>
                             </span>
                             <span>
-                                <NavLink
-                                    to="/test"
-                                    className="nav-item nav-link text-uppercase me-3"
-                                >
-                                    Barada
-                                </NavLink>
+                                <li className="nav-item dropdown">
+                                    <a
+                                        href="#/"
+                                        className="nav-link dropdown-toggle text-uppercase me-3"
+                                        role="button"
+                                        id="dropdownMenuButton"
+                                    >
+                                        Barada
+                                    </a>
+                                    <ul
+                                        className="dropdown-menu rounded-0"
+                                        aria-labelledby="dropdownMenuButton"
+                                    >
+                                        <li>
+                                            <NavLink
+                                                to="about"
+                                                className="dropdown-item bg-white text-black"
+                                            >
+                                                Barada
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink
+                                                to="about/rules"
+                                                className="dropdown-item bg-white text-black"
+                                            >
+                                                Düzgünnama
+                                            </NavLink>
+                                        </li>
+                                    </ul>
+                                </li>
                             </span>
                             <span>
                                 <NavLink
@@ -78,41 +103,6 @@ function Navbar() {
                                 >
                                     Habarlaşmak
                                 </NavLink>
-                            </span>
-                            <span>
-                                <li className="nav-item dropdown">
-                                    <NavLink
-                                        to="/test"
-                                        className="nav-link dropdown-toggle text-uppercase me-3"
-                                        role="button"
-                                        id="dropdownMenuButton"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Email
-                                    </NavLink>
-                                    <ul
-                                        className="dropdown-menu rounded-0"
-                                        aria-labelledby="dropdownMenuButton"
-                                    >
-                                        <li>
-                                            <NavLink
-                                                to="/test"
-                                                className="dropdown-item bg-white text-black"
-                                            >
-                                                Profile
-                                            </NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink
-                                                to="/test"
-                                                className="dropdown-item bg-white text-black"
-                                            >
-                                                Profile
-                                            </NavLink>
-                                        </li>
-                                    </ul>
-                                </li>
                             </span>
                             <div className="btn-part p-0">
                                 <NavLink

@@ -1,6 +1,6 @@
 .banner {
     padding: 150px 0 400px;
-    /* background: url(assets/images/banner/home1.jpg); */
+    /* background: url(https://salamnews.tm/api/media/uploads/news/8369/0-1673411818169-1000.webp); */
     background-size: cover;
     background-position: center;
 }
@@ -183,5 +183,5 @@
     transform: translate(-50%, -50%);
 }
 .cta .cta-content .sec-title {
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
 }

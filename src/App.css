@@ -97,6 +97,31 @@ ul {
 .clear {
     clear: both;
 }
+blockquote {
+    margin: 35px 0!important;
+    padding: 40px;
+    color: #666;
+    position: relative;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 55px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+    clear: both;
+    box-shadow: 0 0 150px #eee;
+}
+blockquote:before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10px;
+    background: #21a7d0;
+}
 .gray-bg {
     background: #f9f8f8;
 }

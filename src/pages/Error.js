@@ -1,16 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Navbar from "../components/UI/Navbar";
 import Footer from "../components/UI/Footer";
+import "./Error.css";
 
 function ErrorPage() {
     return (
         <>
             <Navbar />
-            <main>
-                <h1>Bagyşlaň!</h1>
-                <p>Gözleýän sahypaňyz tapylmady.</p>
-            </main>
+            <div className="main-content">
+                <div className="page-error">
+                    <div className="error-text">
+                        <h1 className="error-code">404</h1>
+                        <h3 className="error-message">
+                            Gözleýän sahypaňyz tapylmady!
+                        </h3>
+                        <div className="btn-part p-0">
+                            <NavLink to="/" className="rounded-0 fw-bold">
+                                Baş sahypa
+                            </NavLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Footer />
         </>
     );

@@ -1,0 +1,25 @@
+.page-error {
+    padding: 200px 0;
+}
+.page-error .error-text {
+    color: #111111;
+    text-align: center;
+}
+.page-error .error-text .error-code {
+    font-size: 100px;
+    color: #111111;
+    position: relative;
+}
+.page-error .error-text .error-code:after {
+    position: absolute;
+    content: "";
+    background: #eee;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+}
+.page-error .error-text h3.error-message {
+    color: #111111;
+}

@@ -1,0 +1,53 @@
+.inner-blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.inner-blog .blog-deatails {
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+}
+.inner-blog .blog-deatails .blog-full {
+    padding: 40px 45px 40px;
+}
+.inner-blog .blog-deatails .blog-full .blog-desc p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #505050;
+}
+.inner-blog .blog-deatails .blog-full .title {
+    color: #111111;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.inner-blog .blog-deatails .blog-full .sm-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #111111;
+}
+.inner-blog .blog-deatails .blog-full .unorder-list {
+    padding-left: 0;
+}
+.inner-blog .blog-deatails .blog-full .unorder-list li {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.inner-blog .blog-deatails .blog-full .unorder-list li svg {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.inner-blog .blog-deatails .blog-full .unorder-list li svg path {
+    color: #21a7d0;
+}
+.inner-blog .ps-navigation {
+    border-top: 1px solid rgba(170, 170, 170, 0.25);
+    border-bottom: 1px solid rgba(170, 170, 170, 0.25);
+    padding: 30px 0;
+    margin: 60px 0 0;
+}
