@@ -97,6 +97,9 @@ ul {
 .clear {
     clear: both;
 }
+.gray-bg {
+    background: #f9f8f8;
+}
 .sub-title {
     color: #21a7d0;
     font-size: 18px;

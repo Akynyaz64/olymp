@@ -1,12 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faEnvelopeOpenText,
+    faMapLocationDot,
+    faMobileScreenButton,
+} from "@fortawesome/free-solid-svg-icons";
 
+import ContactForm from "../components/ContactForm";
 import "./Contact.css";
 
 const ContactPage = () => {
     return (
         <>
-            <div className="main-content">
+            <div className="main-content gray-bg">
                 <div className="breadcrumbs breadcrumbs-overlay">
                     <div className="breadcrumbs-img">
                         <img
@@ -18,11 +25,7 @@ const ContactPage = () => {
                         <h1 className="page-title white-color">Habarlaşmak</h1>
                         <ul>
                             <li>
-                                <NavLink
-                                    to="/"
-                                    className="active"
-                                    end
-                                >
+                                <NavLink to="/" className="active" end>
                                     Baş sahypa
                                 </NavLink>
                             </li>
@@ -33,19 +36,19 @@ const ContactPage = () => {
 
                 <div className="contact-page-section pt-100 pb-100 md-pt-70 md-pb-70">
                     <div className="container">
-                        <div className="row rs-contact-box mb-90 md-mb-50">
+                        <div className="row contact-box mb-90 md-mb-50">
                             <div className="col-lg-4 col-md-12-4 lg-pl-0 sm-mb-30 md-mb-30">
                                 <div className="address-item">
                                     <div className="icon-part">
-                                        <img
-                                            src="assets/images/contact/icon/1.png"
-                                            alt=""
+                                        <FontAwesomeIcon
+                                            icon={faMapLocationDot}
                                         />
                                     </div>
                                     <div className="address-text">
                                         <span className="label">Salgy</span>
                                         <span className="des">
-                                            Türkmenistan, Aşgabat şäheri, Arçabil 10.
+                                            Türkmenistan, Aşgabat şäheri,
+                                            Arçabil 10.
                                         </span>
                                     </div>
                                 </div>
@@ -53,9 +56,8 @@ const ContactPage = () => {
                             <div className="col-lg-4 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
                                 <div className="address-item">
                                     <div className="icon-part">
-                                        <img
-                                            src="assets/images/contact/icon/2.png"
-                                            alt=""
+                                        <FontAwesomeIcon
+                                            icon={faEnvelopeOpenText}
                                         />
                                     </div>
                                     <div className="address-text">
@@ -73,9 +75,8 @@ const ContactPage = () => {
                             <div className="col-lg-4 col-md-12 lg-pl-0 sm-mb-30">
                                 <div className="address-item">
                                     <div className="icon-part">
-                                        <img
-                                            src="assets/images/contact/icon/3.png"
-                                            alt=""
+                                        <FontAwesomeIcon
+                                            icon={faMobileScreenButton}
                                         />
                                     </div>
                                     <div className="address-text">
@@ -93,7 +94,7 @@ const ContactPage = () => {
                         </div>
                         <div className="row align-items-center">
                             <div className="col-lg-6 md-mb-30">
-                                <div className="contact-map3">
+                                <div className="contact-map">
                                     <iframe
                                         src="https://maps.google.com/maps?q=Fort%20Miley&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                         title="map"
@@ -108,73 +109,7 @@ const ContactPage = () => {
                                         </h2>
                                     </div>
                                     <div id="form-messages"></div>
-                                    <form
-                                        id="contact-form"
-                                        method="post"
-                                        action="https://keenitsolutions.com/products/html/educavo/mailer.php"
-                                    >
-                                        <fieldset>
-                                            <div className="row">
-                                                <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                    <input
-                                                        className="from-control"
-                                                        type="text"
-                                                        id="name"
-                                                        name="name"
-                                                        placeholder="Ady"
-                                                        required=""
-                                                    />
-                                                </div>
-                                                <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                    <input
-                                                        className="from-control"
-                                                        type="text"
-                                                        id="email"
-                                                        name="email"
-                                                        placeholder="Elektron poçta"
-                                                        required=""
-                                                    />
-                                                </div>
-                                                <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                    <input
-                                                        className="from-control"
-                                                        type="text"
-                                                        id="phone"
-                                                        name="phone"
-                                                        placeholder="Telefon belgi"
-                                                        required=""
-                                                    />
-                                                </div>
-                                                <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                    <input
-                                                        className="from-control"
-                                                        type="text"
-                                                        id="subject"
-                                                        name="subject"
-                                                        placeholder="Tema"
-                                                        required=""
-                                                    />
-                                                </div>
-
-                                                <div className="col-lg-12 mb-50">
-                                                    <textarea
-                                                        className="from-control"
-                                                        id="message"
-                                                        name="message"
-                                                        placeholder="Hatyňyz"
-                                                        required=""
-                                                    ></textarea>
-                                                </div>
-                                            </div>
-                                            <div className="form-group mb-0">
-                                                <input
-                                                    className="btn-send"
-                                                    type="submit"
-                                                    value="Ugrat"
-                                                />
-                                            </div>
-                                        </fieldset>
-                                    </form>
+                                    <ContactForm />
                                 </div>
                             </div>
                         </div>
