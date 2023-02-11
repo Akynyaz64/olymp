@@ -1,13 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import RootLayout from "./pages/Root";
+import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import AboutPage from "./pages/About.js";
 import RulesPage from "./pages/Rules.js";
 import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
-import RootLayout from "./pages/Root";
-import ErrorPage from "./pages/Error";
+import AuthenticationPage, {
+    action as authAction,
+} from "./pages/Authentication";
+import { action as logoutAction } from "./pages/Logout";
+import { checkAuthLoader, tokenLoader } from "./utils/auth";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -15,6 +20,8 @@ const router = createBrowserRouter([
         path: "/",
         element: <RootLayout />,
         errorElement: <ErrorPage />,
+        id: "root",
+        loader: tokenLoader,
         children: [
             { index: true, element: <HomePage /> },
             {
@@ -30,7 +37,17 @@ const router = createBrowserRouter([
             },
             { path: "products", element: <ProductsPage /> },
             { path: "partners", element: <PartnersPage /> },
-            { path: "contact", element: <ContactPage /> },
+            {
+                path: "contact",
+                element: <ContactPage />,
+                loader: checkAuthLoader,
+            },
+            {
+                path: "auth",
+                element: <AuthenticationPage />,
+                action: authAction,
+            },
+            { path: "logout", action: logoutAction },
         ],
     },
 ]);
