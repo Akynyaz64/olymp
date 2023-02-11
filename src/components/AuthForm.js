@@ -32,7 +32,7 @@ const AuthForm = () => {
                     <input id="email" type="email" name="email" required />
                 </p>
                 <p>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="image">Password</label>
                     <input
                         id="password"
                         type="password"

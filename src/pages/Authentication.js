@@ -1,15 +1,15 @@
 import React from "react";
-import AuthForm from "../components/AuthForm";
 import { json, redirect } from "react-router-dom";
+import AuthForm from "../components/AuthForm";
 
-const AuthenticationPage = () => {
+function AuthenticationPage() {
     return <AuthForm />;
-};
+}
 
 export default AuthenticationPage;
 
 export async function action({ request }) {
-    const searchParams = new URL(request.URL).searchParams;
+    const searchParams = new URL(request.url).searchParams;
     const mode = searchParams.get("mode") || "login";
 
     if (mode !== "login" && mode !== "register") {
@@ -21,8 +21,7 @@ export async function action({ request }) {
         email: data.get("email"),
         password: data.get("password"),
     };
-
-    const response = await fetch("http://172.16.11.179/api/" + mode, {
+    const response = await fetch("http://172.16.11.179:80/api/" + mode, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -45,6 +44,6 @@ export async function action({ request }) {
     const token = resData.token;
 
     localStorage.setItem("token", token);
-    
+
     return redirect("/");
 }
