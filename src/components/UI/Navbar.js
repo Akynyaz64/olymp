@@ -2,7 +2,10 @@ import React from "react";
 import { Form, NavLink, useRouteLoaderData } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowRightFromBracket,
+    faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import user_icon from "../../assets/img/user_icon.png";
 import "./Navbar.css";
 
@@ -155,7 +158,9 @@ function Navbar() {
                                                     Ulgamdan çyk
                                                     <FontAwesomeIcon
                                                         className="ms-2"
-                                                        icon={faArrowRightFromBracket}
+                                                        icon={
+                                                            faArrowRightFromBracket
+                                                        }
                                                     />
                                                 </Form>
                                             </li>
