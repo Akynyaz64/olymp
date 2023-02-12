@@ -1,32 +1,25 @@
 import React from "react";
 import { json, redirect } from "react-router-dom";
-import AuthForm from "../components/AuthForm";
+import LoginForm from "../components/LoginForm";
 
-function AuthenticationPage() {
-    return <AuthForm />;
+function LoginPage() {
+    return <LoginForm />;
 }
 
-export default AuthenticationPage;
+export default LoginPage;
 
 export async function action({ request }) {
-    const searchParams = new URL(request.url).searchParams;
-    const mode = searchParams.get("mode") || "login";
-
-    if (mode !== "login" && mode !== "register") {
-        throw json({ message: "Unsupported mode." }, { status: 422 });
-    }
-
     const data = await request.formData();
-    const authData = {
+    const loginData = {
         email: data.get("email"),
         password: data.get("password"),
     };
-    const response = await fetch("http://172.16.11.179:80/api/" + mode, {
+    const response = await fetch("http://172.16.11.179:80/api/login/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(authData),
+        body: JSON.stringify(loginData),
     });
 
     if (response.status === 422 || response.status === 401) {
@@ -35,7 +28,7 @@ export async function action({ request }) {
 
     if (!response.ok) {
         throw json(
-            { message: "Could not authenticate user." },
+            { message: "Could not login user." },
             { status: 500 }
         );
     }

@@ -96,7 +96,8 @@ const ContactPage = () => {
                             <div className="col-lg-6 md-mb-30">
                                 <div className="contact-map">
                                     <iframe
-                                        src="https://maps.google.com/maps?q=Fort%20Miley&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.8131508459296!2d58.41060571565484!3d37.90849791222686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6ffd0288bf8b01%3A0xe8368ffd1d264518!2zU2FubHkgw6fDtnpnw7x0IElUIG1lw71kYW7Dp2E!5e1!3m2!1sru!2s!4v1676198431224!5m2!1sru!2s"
+                                        loading="lazy"
                                         title="map"
                                     ></iframe>
                                 </div>

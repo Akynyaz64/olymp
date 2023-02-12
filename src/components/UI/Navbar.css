@@ -77,6 +77,12 @@
 .navbar-nav span a:hover {
     color: #21a7d0 !important;
 }
+.navbar-nav span a svg path {
+    transition: all 0.3s ease;
+}
+.navbar-nav span a:hover svg path {
+    color: #21a7d0 !important;
+}
 @media only screen and (max-width: 992px) {
     .navbar-nav span {
         height: 50px !important;
@@ -107,6 +113,9 @@
     -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     z-index: 9999;
+}
+.navbar .dropdown-menu.my-dropdown {
+    top: 50px !important;
 }
 .navbar .dropdown-menu li {
     margin: 0;
@@ -173,5 +182,31 @@
 .btn-part a:active {
     background-color: #21a7d0 !important;
     color: #fff !important;
-    outline: none!important;
+    outline: none !important;
+}
+
+.navbar .user-icon {
+    width: 30px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+
+.navbar .hr {
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+}
+
+.navbar .hr:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 75%;
+    max-width: 1240px;
+    background: rgba(0, 0, 0, 0.1);
 }

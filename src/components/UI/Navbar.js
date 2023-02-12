@@ -1,11 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Form, NavLink, useRouteLoaderData } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightFromBracket, faBars } from "@fortawesome/free-solid-svg-icons";
+import user_icon from "../../assets/img/user_icon.png";
 import "./Navbar.css";
 
 function Navbar() {
+    const token = useRouteLoaderData("root");
+
     return (
         <>
             <div className="navbar sticky-top navbar-expand-lg navbar-light">
@@ -96,22 +99,70 @@ function Navbar() {
                                     Hyzmatdaşlar
                                 </NavLink>
                             </span>
-                            <span>
-                                <NavLink
-                                    to="contact"
-                                    className="nav-item nav-link text-uppercase me-3"
-                                >
-                                    Habarlaşmak
-                                </NavLink>
-                            </span>
-                            <div className="btn-part p-0">
-                                <NavLink
-                                    to="/login"
-                                    className="rounded-0 fw-bold"
-                                >
-                                    Ýüz tutmak
-                                </NavLink>
-                            </div>
+                            {!token && (
+                                <div className="btn-part p-0">
+                                    <NavLink
+                                        to="/login"
+                                        className="rounded-0 fw-bold"
+                                    >
+                                        Ulgama gir
+                                    </NavLink>
+                                </div>
+                            )}
+                            {token && (
+                                <span className=" p-0">
+                                    <li className="nav-item dropdown">
+                                        <a
+                                            href="#/"
+                                            className="nav-link dropdown-toggle text-uppercase me-3"
+                                            role="button"
+                                            id="dropdownMenuButton"
+                                        >
+                                            <img
+                                                src={user_icon}
+                                                alt="User icon"
+                                                className="user-icon"
+                                            />{" "}
+                                            Şahsy otag
+                                        </a>
+                                        <ul
+                                            className="dropdown-menu my-dropdown rounded-0"
+                                            aria-labelledby="dropdownMenuButton"
+                                        >
+                                            <li>
+                                                <NavLink
+                                                    to="about"
+                                                    className="dropdown-item bg-white text-black"
+                                                >
+                                                    Barada
+                                                </NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink
+                                                    to="about"
+                                                    className="dropdown-item bg-white text-black"
+                                                >
+                                                    Barada
+                                                </NavLink>
+                                            </li>
+                                            <div className="hr"></div>
+                                            <li>
+                                                <Form
+                                                    action="/logout"
+                                                    method="post"
+                                                    className="dropdown-item bg-white text-black"
+                                                >
+                                                    Ulgamdan çyk
+                                                    <FontAwesomeIcon
+                                                        className="ms-2"
+                                                        icon={faArrowRightFromBracket}
+                                                    />
+                                                </Form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </span>
+                            )}
                         </div>
                     </div>
                 </div>

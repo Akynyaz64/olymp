@@ -8,9 +8,7 @@ import AboutPage from "./pages/About.js";
 import RulesPage from "./pages/Rules.js";
 import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
-import AuthenticationPage, {
-    action as authAction,
-} from "./pages/Authentication";
+import LoginPage, { action as loginAction } from "./pages/Login";
 import { action as logoutAction } from "./pages/Logout";
 import { checkAuthLoader, tokenLoader } from "./utils/auth";
 import "./App.css";
@@ -40,12 +38,11 @@ const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <ContactPage />,
-                loader: checkAuthLoader,
             },
             {
-                path: "auth",
-                element: <AuthenticationPage />,
-                action: authAction,
+                path: "login",
+                element: <LoginPage />,
+                action: loginAction,
             },
             { path: "logout", action: logoutAction },
         ],

@@ -8,12 +8,10 @@ function RootLayout() {
     const token = useLoaderData();
 
     useEffect(() => {
-      if (!token) {
-        return;
-      }
+        if (!token) {
+            return;
+        }
     }, [token]);
-    
-
 
     return (
         <>

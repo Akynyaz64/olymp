@@ -4,21 +4,17 @@ import {
     Link,
     useActionData,
     useNavigation,
-    useSearchParams,
 } from "react-router-dom";
 
-const AuthForm = () => {
+const LoginForm = () => {
     const data = useActionData();
     const navigation = useNavigation();
-
-    const [searchParams] = useSearchParams();
-    const isLogin = searchParams.get("mode") === "login";
     const isSubmitting = navigation.state === "submitting";
 
     return (
         <>
             <Form method="post">
-                <h1>{isLogin ? "Login" : "Register"}</h1>
+                <h1>Login</h1>
                 {data && data.errors && (
                     <ul>
                         {Object.values(data.errors).map((err) => (
@@ -41,9 +37,7 @@ const AuthForm = () => {
                     />
                 </p>
                 <div>
-                    <Link to={`?mode=${isLogin ? "register" : "login"}`}>
-                        {isLogin ? "Register" : "Login"}
-                    </Link>
+                    <Link to="/register">Register</Link>
                     <button disabled={isSubmitting}>
                         {isSubmitting ? "Submitting..." : "Save"}
                     </button>
@@ -53,4 +47,4 @@ const AuthForm = () => {
     );
 };
 
-export default AuthForm;
+export default LoginForm;
