@@ -134,18 +134,26 @@ function Navbar() {
                                         >
                                             <li>
                                                 <NavLink
-                                                    to="about"
+                                                    to="profile"
                                                     className="dropdown-item bg-white text-black"
                                                 >
-                                                    Barada
+                                                    Şahsy otag
                                                 </NavLink>
                                             </li>
                                             <li>
                                                 <NavLink
-                                                    to="about"
+                                                    to="profile/projects"
                                                     className="dropdown-item bg-white text-black"
                                                 >
-                                                    Barada
+                                                    Taslamalarym
+                                                </NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink
+                                                    to="profile/projects/new"
+                                                    className="dropdown-item bg-white text-black"
+                                                >
+                                                    Täze taslama ugrat
                                                 </NavLink>
                                             </li>
                                             <div className="hr"></div>
@@ -155,13 +163,15 @@ function Navbar() {
                                                     method="post"
                                                     className="dropdown-item bg-white text-black"
                                                 >
-                                                    Ulgamdan çyk
-                                                    <FontAwesomeIcon
-                                                        className="ms-2"
-                                                        icon={
-                                                            faArrowRightFromBracket
-                                                        }
-                                                    />
+                                                    <button>
+                                                        Ulgamdan çyk
+                                                        <FontAwesomeIcon
+                                                            className="ms-2"
+                                                            icon={
+                                                                faArrowRightFromBracket
+                                                            }
+                                                        />
+                                                    </button>
                                                 </Form>
                                             </li>
                                         </ul>

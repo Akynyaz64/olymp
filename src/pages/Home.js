@@ -54,7 +54,7 @@ function HomePage() {
                             boýunça Halkara bäsleşigi yglan edilýär.
                         </div>
                         <div className="btn-part p-0">
-                            <NavLink to="/login" className="fw-bold">
+                            <NavLink to="/profile" className="fw-bold">
                                 Ýüz tutmak
                             </NavLink>
                         </div>
@@ -281,7 +281,7 @@ function HomePage() {
                         </div>
                     </div>
                     <div className="btn-part p-0">
-                        <NavLink to="/login" className="fw-bold">
+                        <NavLink to="/profile" className="fw-bold">
                             Ýüz tutmak
                         </NavLink>
                     </div>

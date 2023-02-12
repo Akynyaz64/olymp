@@ -1,14 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import Navbar from "../components/UI/Navbar";
-import Footer from "../components/UI/Footer";
 import "./Error.css";
 
 function ErrorPage() {
     return (
         <>
-            <Navbar />
             <div className="main-content">
                 <div className="page-error">
                     <div className="error-text">
@@ -24,7 +21,6 @@ function ErrorPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

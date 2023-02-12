@@ -2,7 +2,6 @@ import React from "react";
 import {
     Form,
     Link,
-    NavLink,
     useActionData,
     useNavigation,
 } from "react-router-dom";
@@ -63,10 +62,7 @@ const LoginForm = () => {
                                             </div>
                                             <div className="last-password">
                                                 <p>
-                                                    Hasabyňyz ýokmy?
-                                                    <Link to="/register">
-                                                        Hasap döret
-                                                    </Link>
+                                                    Hasabyňyz ýokmy? <Link to="/register">Hasap döret</Link>
                                                 </p>
                                             </div>
                                         </div>

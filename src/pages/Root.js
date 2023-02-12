@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLoaderData } from "react-router-dom";
 
 import Navbar from "../components/UI/Navbar";
 import Footer from "../components/UI/Footer";
@@ -15,6 +15,7 @@ function RootLayout() {
 
     return (
         <>
+            <ScrollRestoration />
             <Navbar />
             <main>
                 <Outlet />
