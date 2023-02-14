@@ -1,7 +1,7 @@
-import {faArrowRightFromBracket, faHouseUser, faPen, faTasks} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
 import {Form, NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightFromBracket, faHouseUser, faPen, faTasks} from "@fortawesome/free-solid-svg-icons";
 
 import "./Profile.css";
 
@@ -29,7 +29,7 @@ const Profile = () => {
                 <div className="profile-page">
                     <div className="container">
                         <div className="row contact-box mb-90 md-mb-50">
-                            <div className="col-lg-4 col-md-4 lg-pl-0 sm-mb-30 md-mb-30">
+                            <div className="col-lg-4 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
                                 <div className="topper">
                                     <div className="address-item image-wrapper">
                                         <div className="profile-img">
@@ -44,7 +44,7 @@ const Profile = () => {
                                             <ul>
                                                 <li className="align-items-center">
                                                     <FontAwesomeIcon className="me-3" icon={faHouseUser} />
-                                                    <NavLink to="profile" className="active">
+                                                    <NavLink to="/profile" className="active">
                                                         Şahsy otag
                                                     </NavLink>
                                                 </li>
@@ -60,7 +60,7 @@ const Profile = () => {
                                                         Täze taslama ugrat
                                                     </NavLink>
                                                 </li>
-                                                <li className="align-items-center"  >
+                                                <li className="align-items-center">
                                                     <FontAwesomeIcon className="me-3" icon={faArrowRightFromBracket} />
                                                     <Form action="/logout" method="post">
                                                         <button className="link">Ulgamdan çyk</button>
@@ -71,19 +71,38 @@ const Profile = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-8 lg-pl-0 sm-mb-30 md-mb-30">
+                            <div className="col-lg-8 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
                                 <div className="topper">
                                     <div className="address-item">
-                                        <div className="icon-part">
-                                            <FontAwesomeIcon />
-                                        </div>
                                         <div className="address-text">
-                                            <span className="label">Elektron poçta</span>
-                                            <span className="des">
-                                                <a href="mailto:info@rstheme.com">example@mail.com</a>
-                                            </span>
+                                            <h2 className="title">Şahsy maglumatlar</h2>
+                                            <form id="contact-form">
+                                                <fieldset>
+                                                    <div className="row">
+                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                                            <input className="from-control" type="text" id="name" name="name" placeholder="Ady"  />
+                                                        </div>
+                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                                            <input className="from-control" type="text" id="email" name="email" placeholder="Elektron poçta"  />
+                                                        </div>
+                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                                            <input className="from-control" type="text" id="phone" name="phone" placeholder="Telefon belgi"  />
+                                                        </div>
+                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
+                                                            <input className="from-control" type="text" id="subject" name="subject" placeholder="Tema"  />
+                                                        </div>
+
+                                                        <div className="col-lg-12 mb-50">
+                                                            <textarea className="from-control" id="message" name="message" placeholder="Hatyňyz" ></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div className="form-group mb-0">
+                                                        <input className="btn-send" type="submit" value="Ugrat" />
+                                                    </div>
+                                                </fieldset>
+                                            </form>
                                         </div>
-                                    </div>{" "}
+                                    </div>
                                 </div>
                             </div>
                         </div>
