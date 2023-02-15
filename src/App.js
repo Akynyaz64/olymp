@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "profile",
-                // loader: checkAuthLoader,
+                loader: checkAuthLoader,
                 children: [
                     {
                         index: true,

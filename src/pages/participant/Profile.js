@@ -1,7 +1,7 @@
 import React from "react";
 import {Form, NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowRightFromBracket, faHouseUser, faPen, faTasks} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRightFromBracket, faFileImage, faFileUpload, faHouseUser, faPen, faTasks, faUpload} from "@fortawesome/free-solid-svg-icons";
 
 import "./Profile.css";
 
@@ -33,7 +33,11 @@ const Profile = () => {
                                 <div className="topper">
                                     <div className="address-item image-wrapper">
                                         <div className="profile-img">
-                                            <img src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?cs=srgb&dl=pexels-suliman-sallehi-1704488.jpg&fm=jpg" alt="Profile" />
+                                            <label className="mx-auto" htmlFor="profile_image">
+                                                <FontAwesomeIcon icon={faFileImage} className="me-2" /> Surat ýükle
+                                            </label>
+                                            <img src="https://avatars.dzeninfra.ru/get-zen_doc/3324118/pub_5eb0753970671122c89d8919_5eb0753e0ab5b766d085835f/scale_1200" alt="Profile" />
+                                            <input type="file" id="profile_image" accept="image/*"/>
                                         </div>
                                         <div className="address-text">
                                             <span className="label">Ýazmyradow Akynýaz</span>

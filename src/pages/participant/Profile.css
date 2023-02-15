@@ -24,12 +24,47 @@
     padding: 25px;
 }
 .profile-page .contact-box .address-item.image-wrapper .profile-img {
+    position: relative;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
 }
 .profile-page .contact-box .address-item.image-wrapper .profile-img img {
+    width: 100%;
     border-radius: 7px;
+}
+.profile-page .contact-box .address-item.image-wrapper .profile-img input[type="file"] {
+    display: none;
+}
+.profile-page .contact-box .address-item.image-wrapper .profile-img label {
+    position: absolute;
+    left: auto;
+    right: auto;
+    bottom: 10px;
+    color: #101010;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 40px;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.profile-page .contact-box .address-item.image-wrapper .profile-img label svg path {
+    color: #101010;
+}
+.profile-page .contact-box .address-item.image-wrapper .profile-img label:hover {
+    background-color: #1c8eb1;
 }
 .profile-page .contact-box .address-item .icon-part {
     padding-bottom: 20px;
