@@ -131,6 +131,23 @@
     font-size: 15px;
     text-transform: uppercase;
 }
+.navbar .dropdown-menu li form {
+    padding: 0 !important;
+}
+.navbar .dropdown-menu li button {
+    height: unset !important;
+    line-height: unset !important;
+    color: #111 !important;
+    font-weight: 500;
+    margin: 5px 30px !important;
+    width: auto;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #fff !important;
+    border: none !important;
+    text-align: left;
+}
 .navbar .dropdown-menu li a:hover {
     color: #21a7d0 !important;
 }

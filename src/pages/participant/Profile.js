@@ -1,9 +1,10 @@
 import React from "react";
 import {Form, NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowRightFromBracket, faFileImage, faFileUpload, faHouseUser, faPen, faTasks, faUpload} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRightFromBracket, faFileImage, faHouseUser, faPen, faTasks} from "@fortawesome/free-solid-svg-icons";
 
 import "./Profile.css";
+import ProfileInfoForm from "./ProfileInfoForm";
 
 const Profile = () => {
     return (
@@ -37,7 +38,7 @@ const Profile = () => {
                                                 <FontAwesomeIcon icon={faFileImage} className="me-2" /> Surat ýükle
                                             </label>
                                             <img src="https://avatars.dzeninfra.ru/get-zen_doc/3324118/pub_5eb0753970671122c89d8919_5eb0753e0ab5b766d085835f/scale_1200" alt="Profile" />
-                                            <input type="file" id="profile_image" accept="image/*"/>
+                                            <input type="file" id="image" accept="image/*" />
                                         </div>
                                         <div className="address-text">
                                             <span className="label">Ýazmyradow Akynýaz</span>
@@ -80,31 +81,17 @@ const Profile = () => {
                                     <div className="address-item">
                                         <div className="address-text">
                                             <h2 className="title">Şahsy maglumatlar</h2>
-                                            <form id="contact-form">
-                                                <fieldset>
-                                                    <div className="row">
-                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                            <input className="from-control" type="text" id="name" name="name" placeholder="Ady"  />
-                                                        </div>
-                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                            <input className="from-control" type="text" id="email" name="email" placeholder="Elektron poçta"  />
-                                                        </div>
-                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                            <input className="from-control" type="text" id="phone" name="phone" placeholder="Telefon belgi"  />
-                                                        </div>
-                                                        <div className="col-lg-6 mb-35 col-md-6 col-sm-6">
-                                                            <input className="from-control" type="text" id="subject" name="subject" placeholder="Tema"  />
-                                                        </div>
-
-                                                        <div className="col-lg-12 mb-50">
-                                                            <textarea className="from-control" id="message" name="message" placeholder="Hatyňyz" ></textarea>
+                                            <div className="profile-about">
+                                                <div className="container">
+                                                    <div className="full-grid">
+                                                        <div className="billing-fields">
+                                                            <div className="form-content-box">
+                                                                <ProfileInfoForm />
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div className="form-group mb-0">
-                                                        <input className="btn-send" type="submit" value="Ugrat" />
-                                                    </div>
-                                                </fieldset>
-                                            </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -163,7 +163,7 @@ function Navbar() {
                                                     method="post"
                                                     className="dropdown-item bg-white text-black"
                                                 >
-                                                    <button>
+                                                    <button className="">
                                                         Ulgamdan çyk
                                                         <FontAwesomeIcon
                                                             className="ms-2"
