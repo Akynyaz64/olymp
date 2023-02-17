@@ -10,13 +10,13 @@ import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
 import LoginPage, { action as loginAction } from "./pages/Login";
 import { action as logoutAction } from "./pages/Logout";
-import ProfilePage from "./pages/participant/Profile";
-import ProjectsRootLayout from "./pages/participant/ProjectsRoot";
+import ProfileLayout from "./pages/participant/ProfileLayout";
 import ProjectsPage from "./pages/participant/Projects";
 import ProjectDetailPage from "./pages/participant/ProjectDetail";
 import NewProjectPage from "./pages/participant/NewProject";
 import { checkAuthLoader, tokenLoader } from "./utils/auth";
 import "./App.css";
+import ProfileInfoForm from "./pages/participant/ProfileInfoForm";
 
 const router = createBrowserRouter([
     {
@@ -46,15 +46,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "profile",
+                element: <ProfileLayout />,
                 loader: checkAuthLoader,
                 children: [
                     {
                         index: true,
-                        element: <ProfilePage />,
+                        element: <ProfileInfoForm />,
                     },
                     {
                         path: "projects",
-                        element: <ProjectsRootLayout />,
                         children: [
                             { index: true, element: <ProjectsPage /> },
                             {

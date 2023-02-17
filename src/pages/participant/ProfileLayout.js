@@ -1,12 +1,12 @@
 import React from "react";
-import {Form, NavLink} from "react-router-dom";
+import {Form, NavLink, Outlet} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightFromBracket, faFileImage, faHouseUser, faPen, faTasks} from "@fortawesome/free-solid-svg-icons";
 
 import "./Profile.css";
 import ProfileInfoForm from "./ProfileInfoForm";
 
-const Profile = () => {
+const ProfileLayout = () => {
     return (
         <>
             <div className="main-content gray-bg">
@@ -30,7 +30,7 @@ const Profile = () => {
                 <div className="profile-page">
                     <div className="container">
                         <div className="row contact-box mb-90 md-mb-50">
-                            <div className="col-lg-4 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
+                            <div className="col-lg-3 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
                                 <div className="topper">
                                     <div className="address-item image-wrapper">
                                         <div className="profile-img">
@@ -38,7 +38,7 @@ const Profile = () => {
                                                 <FontAwesomeIcon icon={faFileImage} className="me-2" /> Surat ýükle
                                             </label>
                                             <img src="https://avatars.dzeninfra.ru/get-zen_doc/3324118/pub_5eb0753970671122c89d8919_5eb0753e0ab5b766d085835f/scale_1200" alt="Profile" />
-                                            <input type="file" id="image" accept="image/*" />
+                                            <input type="file" id="profile_image" accept="image/*" />
                                         </div>
                                         <div className="address-text">
                                             <span className="label">Ýazmyradow Akynýaz</span>
@@ -76,26 +76,7 @@ const Profile = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-8 col-md-12 lg-pl-0 sm-mb-30 md-mb-30">
-                                <div className="topper">
-                                    <div className="address-item">
-                                        <div className="address-text">
-                                            <h2 className="title">Şahsy maglumatlar</h2>
-                                            <div className="profile-about">
-                                                <div className="container">
-                                                    <div className="full-grid">
-                                                        <div className="billing-fields">
-                                                            <div className="form-content-box">
-                                                                <ProfileInfoForm />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <Outlet />
                         </div>
                     </div>
                 </div>
@@ -104,4 +85,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default ProfileLayout;
