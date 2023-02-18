@@ -1,0 +1,51 @@
+.profile-section {
+    position: relative;
+}
+.profile-section .content-part .title {
+    color: #111111;
+    font-weight: 600;
+    line-height: 1.3em;
+    font-size: 26px;
+}
+.profile-section .content-part p {
+    font-size: 16px;
+    margin: 0;
+}
+.profile-section .content-column {
+    position: relative;
+}
+.profile-section .content-column .inner-column {
+    position: relative;
+}
+.profile-section .content-column .inner-column h2 {
+    position: relative;
+    color: #111111;
+    font-weight: 700;
+    margin: 0;
+}
+.profile-section .content-column .inner-column h4 {
+    position: relative;
+    color: #111111;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.profile-section .content-column .inner-column h5 {
+    position: relative;
+    color: #111111;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+.profile-section .content-column .inner-column p {
+    position: relative;
+    color: #626262;
+    font-weight: 400;
+    line-height: 1.9em;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}

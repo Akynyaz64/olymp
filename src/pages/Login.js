@@ -14,7 +14,7 @@ export async function action({request}) {
         email: data.get("email"),
         password: data.get("password"),
     };
-    const response = await fetch("http://172.16.11.179:80/api/login/", {
+    const response = await fetch("http://localhost:8000/api/login/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
