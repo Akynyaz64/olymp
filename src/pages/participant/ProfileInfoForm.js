@@ -9,7 +9,7 @@ const ProfileInfoForm = () => {
     const fathername = useRef("");
     const birth_date = useRef("");
     const country_id = useRef("");
-    const job = useRef("");
+    const status = useRef("");
     const phone = useRef("");
     const email = useRef("");
 
@@ -22,7 +22,7 @@ const ProfileInfoForm = () => {
             fathername: fathername.current.value || null,
             birth_date: birth_date.current.value || null,
             country_id: country_id.current.value || null,
-            job: job.current.value || null,
+            status: status.current.value || null,
             phone: phone.current.value || null,
             email: email.current.value || null,
         };
@@ -85,7 +85,7 @@ const ProfileInfoForm = () => {
                                                     <div className="col-md-6 col-sm-12 col-xs-12">
                                                         <div className="form-group">
                                                             <label>Doglan ýyly</label>
-                                                            <input id="birth_date" name="birth_date" ref={birth_date} className="form-control-mod margin-bottom" type="text" required="" />
+                                                            <input id="birth_date" name="birth_date" ref={birth_date} className="form-control-mod margin-bottom" type="date" required="" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12 col-xs-12">
@@ -117,7 +117,7 @@ const ProfileInfoForm = () => {
                                                     <div className="col-md-6 col-sm-12 col-xs-12">
                                                         <div className="form-group">
                                                             <label>Wezipesi</label>
-                                                            <input id="fname" name="fname" ref={job} className="form-control-mod margin-bottom" type="text" required="" />
+                                                            <input id="fname" name="fname" ref={status} className="form-control-mod margin-bottom" type="text" required="" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12 col-xs-12">

@@ -10,6 +10,7 @@ const ProjectDetail = () => {
                     <div className="address-text">
                         <h2 className="title">Taslamanyn ady</h2>
                         
+                        
                     </div>
                 </div>
             </div>

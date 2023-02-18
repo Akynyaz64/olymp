@@ -10,14 +10,14 @@ const Projects = () => {
                 <div className="address-item">
                     <div className="address-text">
                         <h2 className="title">Taslamalarym</h2>
-                        <div class="table-responsive">
-                            <table class="table table-striped custom-table">
+                        <div className="table-responsive">
+                            <table className="table table-striped custom-table">
                                 <thead>
-                                    <tr class="active">
+                                    <tr className="active">
                                         {/* <th scope="col">
-                                            <label class="control control--checkbox">
-                                                <input type="checkbox" class="js-check-all" />
-                                                <div class="control__indicator"></div>
+                                            <label className="control control--checkbox">
+                                                <input type="checkbox" className="js-check-all" />
+                                                <div className="control__indicator"></div>
                                             </label>
                                         </th> */}
                                         <th scope="col">T/b</th>
@@ -30,11 +30,11 @@ const Projects = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr scope="row" class="">
+                                    <tr scope="row" className="">
                                         {/* <td>
-                                            <label class="control control--checkbox">
+                                            <label className="control control--checkbox">
                                                 <input type="checkbox" />
-                                                <div class="control__indicator"></div>
+                                                <div className="control__indicator"></div>
                                             </label>
                                         </td> */}
                                         <td>1</td>
@@ -48,11 +48,11 @@ const Projects = () => {
                                             <a href="">Giňişleýin</a>
                                         </td>
                                     </tr>
-                                    <tr scope="row" class="">
+                                    <tr scope="row" className="">
                                         {/* <td>
-                                            <label class="control control--checkbox">
+                                            <label className="control control--checkbox">
                                                 <input type="checkbox" />
-                                                <div class="control__indicator"></div>
+                                                <div className="control__indicator"></div>
                                             </label>
                                         </td> */}
                                         <td>2</td>
@@ -66,11 +66,11 @@ const Projects = () => {
                                             <a href="">Giňişleýin</a>
                                         </td>
                                     </tr>
-                                    <tr scope="row" class="">
+                                    <tr scope="row" className="">
                                         {/* <td>
-                                            <label class="control control--checkbox">
+                                            <label className="control control--checkbox">
                                                 <input type="checkbox" />
-                                                <div class="control__indicator"></div>
+                                                <div className="control__indicator"></div>
                                             </label>
                                         </td> */}
                                         <td>3</td>
