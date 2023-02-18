@@ -10,6 +10,8 @@ import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
 import LoginPage, { action as loginAction } from "./pages/Login";
 import { action as logoutAction } from "./pages/Logout";
+import RegisterPage from "./pages/Register";
+import { action as registerAction } from "./pages/Register";
 import ProfileLayout from "./pages/participant/ProfileLayout";
 import ProjectsPage from "./pages/participant/Projects";
 import ProjectDetailPage from "./pages/participant/ProjectDetail";
@@ -71,6 +73,11 @@ const router = createBrowserRouter([
                 path: "login",
                 element: <LoginPage />,
                 action: loginAction,
+            },
+            {
+                path: "register",
+                element: <RegisterPage />,
+                action: registerAction,
             },
             { path: "logout", action: logoutAction },
         ],

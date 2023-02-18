@@ -1,10 +1,5 @@
 import React from "react";
-import {
-    Form,
-    Link,
-    useActionData,
-    useNavigation,
-} from "react-router-dom";
+import {Form, Link, useActionData, useNavigation} from "react-router-dom";
 
 import "./LoginForm.css";
 
@@ -19,45 +14,24 @@ const LoginForm = () => {
                 <div className="login">
                     <div className="container">
                         <div className="noticed">
-                            <div className="main-part">
+                            <div className="main-part no-width">
                                 <div className="method-account">
                                     <Form method="post">
                                         <h2 className="login-text">Ulgama gir</h2>
                                         {data && data.errors && (
                                             <ul>
-                                                {Object.values(data.errors).map(
-                                                    (err) => (
-                                                        <li key={err}>{err}</li>
-                                                    )
-                                                )}
+                                                {Object.values(data.errors).map((err) => (
+                                                    <li key={err}>{err}</li>
+                                                ))}
                                             </ul>
                                         )}
-                                        {data && data.message && (
-                                            <p>{data.message}</p>
-                                        )}
+                                        {data && data.message && <p>{data.message}</p>}
                                         <div>
-                                            <input
-                                                id="email"
-                                                type="email"
-                                                name="email"
-                                                placeholder="E-mail"
-                                                required
-                                            />
-                                            <input
-                                                id="password"
-                                                type="password"
-                                                name="password"
-                                                placeholder="Açar söziňiz"
-                                                required
-                                            />
+                                            <input id="email" type="email" name="email" placeholder="E-mail" required />
+                                            <input id="password" type="password" name="password" placeholder="Açar sözüňiz" required />
                                             <div>
-                                                <button
-                                                    className="readon submit-btn"
-                                                    disabled={isSubmitting}
-                                                >
-                                                    {isSubmitting
-                                                        ? "Tassyklanýar..."
-                                                        : "Tassykla"}
+                                                <button className="readon submit-btn" disabled={isSubmitting}>
+                                                    {isSubmitting ? "Tassyklanýar..." : "Tassykla"}
                                                 </button>
                                             </div>
                                             <div className="last-password">

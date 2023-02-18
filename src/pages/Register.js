@@ -1,12 +1,14 @@
 import React from "react";
-import {json, redirect} from "react-router-dom";
-import LoginForm from "../components/LoginForm";
+import { json, redirect } from "react-router-dom";
+import RegisterForm from "../components/RegisterForm";
 
-function LoginPage() {
-    return <LoginForm />;
-}
+const RegisterPage = () => {
+    return (
+        <RegisterForm />
+    );
+};
 
-export default LoginPage;
+export default RegisterPage;
 
 export async function action({request}) {
     const data = await request.formData();

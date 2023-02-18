@@ -8,7 +8,7 @@
     padding: 70px;
     margin: 0 auto;
 }
-.login .noticed .main-part {
+.login .noticed .main-part.no-width {
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
