@@ -33,6 +33,19 @@
     border-radius: 5px;
     box-shadow: 0 0 30px #eee;
 }
+.login .noticed .main-part .method-account select {
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #505050;
+    width: 100%;
+    display: block;
+    border: none;
+    height: 45px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #eee;
+}
 .readon.submit-btn {
     border: 2px solid;
     border-color: #21a7d0;

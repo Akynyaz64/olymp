@@ -40,13 +40,30 @@ const RegisterForm = () => {
                                                         <input type="date" id="birth_date" name="birth_date" placeholder="Doglan güni" required />
                                                     </div>
                                                     <div className="col-lg-6 col-md-12 col-12">
+                                                        <input type="text" id="phone" name="phone" placeholder="Telefon belgiňiz" required />
+                                                    </div>
+                                                    <div className="col-lg-6 col-md-12 col-12">
                                                         <input type="email" id="email" name="email" placeholder="Elektron poçta" required />
                                                     </div>
                                                     <div className="col-lg-6 col-md-12 col-12">
-                                                        <input type="text" id="puser" name="Password" value="" placeholder="Password" required />
+                                                        <select name="country_id" id="country_id">
+                                                            <option value="" disabled>
+                                                                Ýurdy saýlaň
+                                                            </option>
+                                                            <option value="1">Ýurt 1</option>
+                                                            <option value="2">Ýurt 2</option>
+                                                            <option value="3">Ýurt 3</option>
+                                                            <option value="4">Ýurt 4</option>
+                                                            <option value="5">Ýurt 5</option>
+                                                            <option value="6">Ýurt 6</option>
+                                                            <option value="7">Ýurt 7</option>
+                                                        </select>
                                                     </div>
                                                     <div className="col-lg-6 col-md-12 col-12">
-                                                        <input type="text" id="Confirm" name="Confirm Password" value="" placeholder="Confirm Password" required />
+                                                        <input type="text" id="status" name="status" placeholder="Wezipesi" required />
+                                                    </div>
+                                                    <div className="col-lg-6 col-md-12 col-12">
+                                                        <input type="password" id="password" name="password" placeholder="Açar sözi" required />
                                                     </div>
                                                 </div>
                                                 <div>

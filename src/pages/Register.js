@@ -13,10 +13,17 @@ export default RegisterPage;
 export async function action({request}) {
     const data = await request.formData();
     const loginData = {
+        name: data.get("name"),
+        surname: data.get("surname"),
+        fathername: data.get("fathername"),
+        birth_date: data.get("birth_date"),
+        phone: data.get("phone"),
         email: data.get("email"),
+        country_id: data.get("country_id"),
+        status: data.get("status"),
         password: data.get("password"),
     };
-    const response = await fetch("http://172.16.11.179:80/api/login/", {
+    const response = await fetch("http://172.16.11.179:80/api/register/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -29,7 +36,7 @@ export async function action({request}) {
     }
 
     if (!response.ok) {
-        throw json({message: "Could not login user."}, {status: 500});
+        throw json({message: "Could not register user."}, {status: 500});
     }
 
     const resData = await response.json();
