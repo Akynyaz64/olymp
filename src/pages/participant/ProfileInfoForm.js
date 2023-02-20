@@ -29,7 +29,7 @@ const ProfileInfoForm = () => {
 
         console.log(formData);
 
-        const response = await fetch("http://localhost:8000/api/me/", {
+        const response = await fetch("https://it.net.tm/yarys/api/me/", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

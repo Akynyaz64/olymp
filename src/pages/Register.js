@@ -23,7 +23,7 @@ export async function action({request}) {
         status: data.get("status"),
         password: data.get("password"),
     };
-    const response = await fetch("http://localhost:8000/api/register/", {
+    const response = await fetch("https://it.net.tm/yarys/api/register/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
