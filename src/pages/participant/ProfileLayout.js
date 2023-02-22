@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useCallback, useContext, useEffect } from "react";
 import { Form, json, NavLink, Outlet, redirect, useRouteLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket, faFileImage, faHouseUser, faPen, faTasks } from "@fortawesome/free-solid-svg-icons";
@@ -11,29 +11,30 @@ const ProfileLayout = (props) => {
 
     const { data, updateInfo } = useContext(UserContext);
 
-    useEffect(() => {
-        async function getUserData() {
-            const response = await fetch("https://it.net.tm/yarys/api/me/", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-            if (response.status === 422 || response.status === 401) {
-                return response;
-            }
-            if (!response.ok) {
-                throw json({ message: "Could fetch user data." }, { status: 500 });
-            }
-            const userFetchedData = await response.json();
-            updateInfo(userFetchedData);
-            console.log(userFetchedData);
-            console.log(data);
-            return redirect("/profile");
+    const getUserData = useCallback(async () => {
+        const response = await fetch("https://it.net.tm/yarys/api/me/", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        if (response.status === 422 || response.status === 401) {
+            return response;
         }
+        if (!response.ok) {
+            throw json({ message: "Could fetch user data." }, { status: 500 });
+        }
+        const userFetchedData = await response.json();
+        updateInfo(userFetchedData);
+        console.log(userFetchedData);
+        console.log(data);
+        return redirect("/profile");
+    }, []);
+    
+    useEffect(() => {
         getUserData();
-    }, [token, updateInfo]);
+    }, [getUserData]);
 
     useEffect(() => {
         if (!token) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, ScrollRestoration, useLoaderData } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 import { DataProvider } from "../context/authContext";
 import Navbar from "../components/UI/Navbar";
