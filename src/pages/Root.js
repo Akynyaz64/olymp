@@ -1,27 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Outlet, ScrollRestoration, useLoaderData } from "react-router-dom";
 
+import { DataProvider } from "../context/authContext";
 import Navbar from "../components/UI/Navbar";
 import Footer from "../components/UI/Footer";
 
 function RootLayout() {
-    const token = useLoaderData();
-
-    useEffect(() => {
-        if (!token) {
-            return;
-        }
-    }, [token]);
-
     return (
-        <>
+        <DataProvider>
             <ScrollRestoration />
             <Navbar />
             <main>
                 <Outlet />
             </main>
             <Footer />
-        </>
+        </DataProvider>
     );
 }
 
