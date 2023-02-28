@@ -1,7 +1,7 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
+import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./About.css";
 
@@ -96,19 +96,29 @@ const RulesPage = () => {
                             </div>
                             <ul className="unorder-list mt-4">
                                 <li>
-                                    <FontAwesomeIcon icon={faChevronRight} /> nanotehnologiýalar, himiki tehnologiýalar, täze materiallary öwrenmek we energetika;
+                                    <Link to={"/category/1"}>
+                                        <FontAwesomeIcon icon={faChevronRight} /> nanotehnologiýalar, himiki tehnologiýalar, täze materiallary öwrenmek we energetika;
+                                    </Link>
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faChevronRight} /> biotehnologiýa, molekulýar biologiýa, oba hojalygy, ekologiýa we genetika;
+                                    <Link to={"/category/1"}>
+                                        <FontAwesomeIcon icon={faChevronRight} /> biotehnologiýa, molekulýar biologiýa, oba hojalygy, ekologiýa we genetika;
+                                    </Link>
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faChevronRight} /> maglumat we aragatnaşyk ulgamlary, kompýuter tehnologiýalary;
+                                    <Link to={"/category/1"}>
+                                        <FontAwesomeIcon icon={faChevronRight} /> maglumat we aragatnaşyk ulgamlary, kompýuter tehnologiýalary;
+                                    </Link>
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faChevronRight} /> häzirki zaman lukmançylyk we derman serişdelerini öndürmek tehnologiýalary;
+                                    <Link to={"/category/1"}>
+                                        <FontAwesomeIcon icon={faChevronRight} /> häzirki zaman lukmançylyk we derman serişdelerini öndürmek tehnologiýalary;
+                                    </Link>
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faChevronRight} /> innowasiýa ykdysadyýeti;
+                                    <Link to={"/category/1"}>
+                                        <FontAwesomeIcon icon={faChevronRight} /> innowasiýa ykdysadyýeti;
+                                    </Link>
                                 </li>
                             </ul>
                             <div className="blog-desc mb-40">

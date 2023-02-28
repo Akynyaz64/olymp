@@ -3,9 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
-import ProductsPage from "./pages/Products";
+import JuryPage from "./pages/Jury";
 import AboutPage from "./pages/About.js";
 import CategoryPage from "./pages/Category.js";
+import CategoriesPage from "./pages/Categories.js";
 import RulesPage from "./pages/Rules.js";
 import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
@@ -38,11 +39,23 @@ const router = createBrowserRouter([
                         element: <AboutPage />,
                     },
                     { path: "rules", element: <RulesPage /> },
-                    { path: "products", element: <ProductsPage /> },
                 ],
             },
-            { path: "products", element: <ProductsPage /> },
-            { path: "category:categoryId", element: <CategoryPage /> },
+            { path: "jury", element: <JuryPage /> },
+            {
+                path: "category",
+                children: [
+                    {
+                        index: true,
+                        element: <CategoriesPage />,
+                    },
+                    {
+                        path: ":categoryId",
+                        id: "category-detail",
+                        element: <CategoryPage />,
+                    },
+                ],
+            },
             { path: "partners", element: <PartnersPage /> },
             {
                 path: "contact",

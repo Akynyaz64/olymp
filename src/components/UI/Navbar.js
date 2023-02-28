@@ -88,10 +88,18 @@ function Navbar() {
                             </span>
                             <span>
                                 <NavLink
-                                    to="/test"
+                                    to="/category"
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
-                                    Products
+                                    Ugurlar
+                                </NavLink>
+                            </span>
+                            <span>
+                                <NavLink
+                                    to="/jury"
+                                    className="nav-item nav-link text-uppercase me-3"
+                                >
+                                    Eminler
                                 </NavLink>
                             </span>
                             <span>
@@ -100,6 +108,14 @@ function Navbar() {
                                     className="nav-item nav-link text-uppercase me-3"
                                 >
                                     Hyzmatdaşlar
+                                </NavLink>
+                            </span>
+                            <span>
+                                <NavLink
+                                    to="contact"
+                                    className="nav-item nav-link text-uppercase me-3"
+                                >
+                                    Habarlaşmak
                                 </NavLink>
                             </span>
                             {!token && (
