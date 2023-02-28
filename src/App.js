@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import RootLayout from "./pages/Root";
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminPage from "./pages/admin/Admin";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import JuryPage from "./pages/Jury";
@@ -95,6 +97,26 @@ const router = createBrowserRouter([
                 action: registerAction,
             },
             { path: "logout", action: logoutAction },
+        ],
+    },
+    {
+        path: "/admin_panel",
+        element: <AdminLayout />,
+        errorElement: <ErrorPage />,
+        id: "admin",
+        loader: tokenLoader,
+        children: [
+            { index: true, element: <AdminPage /> },
+            {
+                path: "profile",
+                children: [
+                    {
+                        index: true,
+                        element: <AboutPage />,
+                    },
+                    { path: "rules", element: <RulesPage /> },
+                ],
+            },
         ],
     },
 ]);
