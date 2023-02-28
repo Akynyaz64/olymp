@@ -1,6 +1,6 @@
 .banner {
     padding: 150px 0 400px;
-    /* background: url(https://salamnews.tm/api/media/uploads/news/8369/0-1673411818169-1000.webp); */
+    background: url("../assets/img/bg.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -184,4 +184,226 @@
 }
 .cta .cta-content .sec-title {
     margin-bottom: 20px !important;
+}
+.faq-part {
+    padding: 100px 0;
+}
+.faq-part .content-part .title .text-part {
+    font-size: 20px;
+    color: #111111;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.faq-part .content-part .accordion {
+    border-width: 12px;
+}
+.faq-part .content-part .accordion .card {
+    margin-bottom: 15px;
+    border: none;
+}
+.faq-part .content-part .accordion .card:last-child {
+    margin-bottom: 0;
+}
+.faq-part .content-part .accordion .card .card-header {
+    padding: 0 !important;
+    border: none;
+}
+.faq-part .content-part .accordion .card .card-header .card-link {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #ffffff;
+    display: block;
+    padding: 15px 15px;
+    text-transform: capitalize;
+    background: #21a7d0;
+}
+.faq-part .content-part .accordion .card .card-header .card-link.collapsed {
+    background: #f9f8ff;
+    color: #505050;
+}
+.faq-part .content-part .accordion .card .card-body {
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #505050;
+    padding: 15px 14px 15px !important;
+    border: 1px solid #f9f8ff;
+}
+.faq-part.style1 .main-part {
+    background: #f9f8f8;
+    padding: 60px 60px 70px;
+}
+.faq-part.style1 .main-part .title .text-part {
+    font-size: 36px;
+    color: #111111;
+    line-height: 46px;
+    font-weight: 700;
+}
+.faq-part.style1 .main-part .faq-content .accordion {
+    border-width: 12px;
+}
+.faq-part.style1 .main-part .faq-content .accordion .card {
+    margin-bottom: 25px;
+    border: none;
+}
+.faq-part.style1 .main-part .faq-content .accordion .card .card-header {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    border: none;
+}
+.faq-part.style1 .main-part .faq-content .accordion .card .card-header .card-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    height: 65px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #21a7d0;
+    box-shadow: 0 0 49px 0 rgba(0, 0, 0, 0.08);
+    color: #ffffff;
+}
+.faq-part.style1 .main-part .faq-content .accordion .card .card-header .card-link.collapsed {
+    background: #ffffff;
+    color: #111111;
+}
+.faq-part.style1 .main-part .faq-content .accordion .card .card-body {
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #505050;
+    padding: 15px 14px 15px !important;
+    width: 100%;
+}
+.faq-part.style1 .main-part.new-style {
+    background: #f3fcf8;
+    padding: 49px 50px 70px;
+}
+.faq-part.style1 .main-part.new-style .faq-content .accordion .card:last-child {
+    margin-bottom: 0;
+}
+.faq-part.style1 .main-part.new-style .faq-content .accordion .card .card-header .card-link {
+    background: #0c8b51;
+}
+.faq-part.style1 .main-part.new-style .faq-content .accordion .card .card-header .card-link.collapsed {
+    background: #ffffff;
+    color: #111111;
+}
+.faq-part.style1 .main-part.new-style .faq-content .accordion .card .card-body {
+    padding: 20px 14px 35px !important;
+}
+.faq-part.style1 .img-part {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-height: 615px;
+}
+.faq-part.orange-color .content-part .accordion .card .card-header .card-link,
+.faq-part.orange-color .main-part .faq-content .accordion .card .card-header .card-link {
+    background: #ff5421;
+}
+.faq-part.orange-color .content-part .accordion .card .card-header .card-link.collapsed,
+.faq-part.orange-color .main-part .faq-content .accordion .card .card-header .card-link.collapse {
+    background: #f9f8ff;
+}
+
+.rs-featured-courses {
+    padding: 100px 0;
+    background: #e7f8fb;
+}
+.rs-featured-courses .rs-carousel .owl-dots {
+    text-align: center;
+}
+.rs-featured-courses .rs-carousel .owl-dots .owl-dot {
+    width: 30px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 6px;
+    padding: 3px 0;
+    border-radius: 30px;
+    background: #111111;
+}
+.rs-featured-courses .rs-carousel .owl-dots .owl-dot:hover {
+    background: #21a7d0;
+}
+.rs-featured-courses .rs-carousel .owl-dots .active {
+    background: #21a7d0;
+}
+.rs-featured-courses .owl-stage-outer {
+    padding-bottom: 10px;
+}
+.rs-featured-courses .courses-item {
+    padding: 0 30px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.rs-featured-courses .courses-item .img-part {
+    position: relative;
+    z-index: 111;
+}
+.rs-featured-courses .courses-item .content-part {
+    padding: 30px 0;
+    position: relative;
+    z-index: 111;
+}
+.rs-featured-courses .courses-item .content-part span .categories {
+    display: inline-block;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rs-featured-courses .courses-item .content-part span {
+    display: flex;
+}
+.rs-featured-courses .courses-item .content-part span .categories.bg1 {
+    background: #c701f1;
+}
+.rs-featured-courses .courses-item .content-part span .categories.bg2 {
+    background: #065ce8;
+}
+.rs-featured-courses .courses-item .content-part span .categories.bg3 {
+    background: #f6075b;
+}
+.rs-featured-courses .courses-item .content-part .title {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    margin-top: 2rem!important;
+}
+.rs-featured-courses .courses-item .content-part .title a {
+    color: #031a3d;
+}
+.rs-featured-courses .courses-item .content-part .title a:hover {
+    color: #21a7d0;
+}
+.rs-featured-courses .courses-item .content-part .images {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e8eb;
+    padding-bottom: 35px;
+}
+.rs-featured-courses .courses-item:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 90%;
+    height: 78%;
+    background: #ffff;
+    border-radius: 3px;
+}
+.rs-featured-courses .courses-item:hover {
+    transform: translateY(-10px);
 }

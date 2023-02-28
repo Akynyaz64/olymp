@@ -5,6 +5,7 @@ import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import AboutPage from "./pages/About.js";
+import CategoryPage from "./pages/Category.js";
 import RulesPage from "./pages/Rules.js";
 import PartnersPage from "./pages/Partners.js";
 import ContactPage from "./pages/Contact";
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
                 ],
             },
             { path: "products", element: <ProductsPage /> },
+            { path: "category:categoryId", element: <CategoryPage /> },
             { path: "partners", element: <PartnersPage /> },
             {
                 path: "contact",
