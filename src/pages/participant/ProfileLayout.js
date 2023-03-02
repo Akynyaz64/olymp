@@ -28,7 +28,7 @@ const ProfileLayout = (props) => {
                 throw json({ message: "Could fetch user data." }, { status: 500 });
             }
             const userFetchedData = await response.json();
-            setUserData(userFetchedData);
+            setUserData(userFetchedData[0]);
         } catch (error) {
             console.log(error.message);
         }
@@ -46,16 +46,6 @@ const ProfileLayout = (props) => {
     }, [token]);
 
     console.log(userData);
-
-    let profileImage = <img src={"https://it.net.tm"} alt="Profile" />;
-
-    if (isLoading) {
-        profileImage = <p>Loading...</p>;
-        console.log("loading");
-    } else {
-        profileImage = <img src={`https://it.net.tm/ ${userData.image}`} alt="Profile" />;
-        console.log("loaded");
-    }
 
     return (
         <div className="main-content gray-bg">
@@ -86,13 +76,13 @@ const ProfileLayout = (props) => {
                                         <label className="mx-auto" htmlFor="profile_image">
                                             <FontAwesomeIcon icon={faFileImage} className="me-2" /> Surat ýükle
                                         </label>
-                                        {profileImage}
+                                        <img src="#" alt="Logo" />
                                         <input type="file" id="profile_image" accept="image/*" />
                                     </div>
 
                                     <div className="address-text">
-                                        <span className="label">.</span>
-                                        <span className="des">Türkmenistan, Aşgabat</span>
+                                        <span className="label">{userData.surname + " " + userData.name}</span>
+                                        <span className="des">{userData.country_id}</span>
                                     </div>
                                     <hr />
                                     <div className="profile-links">
@@ -126,7 +116,7 @@ const ProfileLayout = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <Outlet />
+                        <Outlet context={userData} />
                     </div>
                 </div>
             </div>
