@@ -103,7 +103,7 @@ const router = createBrowserRouter([
         path: "/root_admin",
         element: <AdminLayout />,
         errorElement: <ErrorPage />,
-        id: "admin",
+        id: "root_admin",
         loader: tokenLoader,
         children: [
             { index: true, element: <AdminPage /> },
@@ -122,7 +122,7 @@ const router = createBrowserRouter([
         path: "/cat_admin",
         element: <AdminLayout />,
         errorElement: <ErrorPage />,
-        id: "admin",
+        id: "cat_admin",
         loader: tokenLoader,
         children: [
             { index: true, element: <AdminPage /> },
